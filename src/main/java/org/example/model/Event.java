@@ -5,8 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
 import java.util.Date;
+import java.util.LinkedList;
 import java.util.List;
 
 @Data
@@ -19,5 +19,5 @@ public class Event {
     private String nameDefault;
     private Date kickoff;
     @Builder.Default
-    private List<Market> markets = new ArrayList<>();
+    private List<Market> markets = new LinkedList<>();
 }

@@ -15,4 +15,5 @@ public class League {
     private String nameDefault;
     private Boolean top;
     private Integer topOrder;
+    private String regionName;
 }

@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -16,5 +17,6 @@ public class Region {
     private String name;
     private String nameDefault;
     private String family;
-    private List<League> leagues;
+    @Builder.Default
+    private List<League> leagues = new ArrayList<>();
 }
