@@ -1,4 +1,4 @@
-package org.example.model;
+package org.example.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,16 +7,16 @@ import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Matches {
-    private Boolean enabled;
-    private Integer totalCount;
-    private UUID vtag;
+public class RegionDto {
+    private Long id;
+    private String name;
+    private String nameDefault;
+    private String family;
     @Builder.Default
-    private List<Event> events = new ArrayList<>();
+    private List<LeagueDto> leagues = new ArrayList<>();
 }

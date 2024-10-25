@@ -1,4 +1,4 @@
-package org.example.model;
+package org.example.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,11 +12,11 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Region {
+public class SportDto {
     private Long id;
     private String name;
-    private String nameDefault;
+    private Integer weight;
     private String family;
     @Builder.Default
-    private List<League> leagues = new ArrayList<>();
+    private List<RegionDto> regions = new ArrayList<>();
 }

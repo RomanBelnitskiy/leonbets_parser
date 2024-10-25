@@ -1,4 +1,4 @@
-package org.example.model;
+package org.example.dto;
 
 public enum SportType {
     FOOTBALL("Football"),

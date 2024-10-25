@@ -4,16 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed2e235b-af48-4c28-89ef-3ad7cdc0ef6c" name="Changes" comment="parser without multithreading">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/AsyncParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/EventDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/LeagueDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/MarketDto.java" afterDir="false" />
+    <list default="true" id="ed2e235b-af48-4c28-89ef-3ad7cdc0ef6c" name="Changes" comment="removed unused dependency">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/parser/task/EventTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/parser/task/LeagueTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/printer/ResultPrinter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/printer/impl/ConsoleResultPrinter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/DataService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/DataServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/DateUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/parser/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/EventDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/EventDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/LeagueDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/LeagueDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/MarketDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/MarketDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Event.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/League.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/League.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Region.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Region.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Market.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Market.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Matches.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/MatchesDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Region.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/RegionDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/RunnerDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Sport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/SportDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/SportType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/SportType.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +36,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -45,6 +58,7 @@
   &quot;keyToString&quot;: {
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -66,7 +80,7 @@
       <module name="leonbets_parser" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.parser.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -101,7 +115,9 @@
       <workItem from="1729638159171" duration="2885000" />
       <workItem from="1729666223376" duration="11490000" />
       <workItem from="1729688041263" duration="3249000" />
-      <workItem from="1729754320247" duration="14337000" />
+      <workItem from="1729754320247" duration="15428000" />
+      <workItem from="1729861619079" duration="1555000" />
+      <workItem from="1729889591712" duration="4213000" />
     </task>
     <task id="LOCAL-00001" summary="parser without multithreading">
       <option name="closed" value="true" />
@@ -111,7 +127,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729675718053</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added multithreading">
+      <option name="closed" value="true" />
+      <created>1729768963024</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729768963024</updated>
+    </task>
+    <task id="LOCAL-00003" summary="removed unused dependency">
+      <option name="closed" value="true" />
+      <created>1729769081289</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729769081289</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +162,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="parser without multithreading" />
-    <option name="LAST_COMMIT_MESSAGE" value="parser without multithreading" />
+    <MESSAGE value="added multithreading" />
+    <MESSAGE value="removed unused dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed unused dependency" />
   </component>
 </project>

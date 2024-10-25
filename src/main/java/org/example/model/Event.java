@@ -5,8 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -14,10 +13,22 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Event {
-    private Long id;
-    private String name;
-    private String nameDefault;
-    private Date kickoff;
-    @Builder.Default
-    private List<Market> markets = new LinkedList<>();
+    private String caption;
+    private List<Market> markets = new ArrayList<>();
+
+    @Override
+    public String toString() {
+        return caption + "\n"
+                + marketsToString();
+    }
+
+    private String marketsToString() {
+        StringBuilder builder = new StringBuilder();
+        for (final Market market : markets) {
+            builder
+                    .append("\t\t")
+                    .append(market.toString());
+        }
+        return builder.toString();
+    }
 }
