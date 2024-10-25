@@ -4,28 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed2e235b-af48-4c28-89ef-3ad7cdc0ef6c" name="Changes" comment="removed unused dependency">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/parser/task/EventTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/parser/task/LeagueTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/printer/ResultPrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/printer/impl/ConsoleResultPrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/DataService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/DataServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/DateUtil.java" afterDir="false" />
+    <list default="true" id="ed2e235b-af48-4c28-89ef-3ad7cdc0ef6c" name="Changes" comment="spread to packages">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/printer/impl/ExcelResultPrinter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/parser/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/EventDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/EventDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/LeagueDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/LeagueDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/MarketDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/MarketDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/League.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/League.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Market.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Market.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Matches.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/MatchesDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Region.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/RegionDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/RunnerDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Sport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/SportDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/SportType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/SportType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/parser/Parser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +101,7 @@
       <workItem from="1729688041263" duration="3249000" />
       <workItem from="1729754320247" duration="15428000" />
       <workItem from="1729861619079" duration="1555000" />
-      <workItem from="1729889591712" duration="4213000" />
+      <workItem from="1729889591712" duration="8117000" />
     </task>
     <task id="LOCAL-00001" summary="parser without multithreading">
       <option name="closed" value="true" />
@@ -143,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729769081289</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="spread to packages">
+      <option name="closed" value="true" />
+      <created>1729894165730</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729894165730</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +156,7 @@
     <MESSAGE value="parser without multithreading" />
     <MESSAGE value="added multithreading" />
     <MESSAGE value="removed unused dependency" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed unused dependency" />
+    <MESSAGE value="spread to packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="spread to packages" />
   </component>
 </project>

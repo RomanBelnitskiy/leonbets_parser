@@ -27,13 +27,17 @@ public class Parser {
         List<SportDto> sportDtoList = dataService.fetchSports();
 
         List<LeagueDto> footballLeagueDtos = getLeaguesBySportType(sportDtoList, SportType.FOOTBALL);
-        processLeagues(footballLeagueDtos, SportType.FOOTBALL);
         List<LeagueDto> iceHockeyLeagueDtos = getLeaguesBySportType(sportDtoList, SportType.ICE_HOCKEY);
-        processLeagues(iceHockeyLeagueDtos, SportType.ICE_HOCKEY);
         List<LeagueDto> tennisLeagueDtos = getLeaguesBySportType(sportDtoList, SportType.TENNIS);
-        processLeagues(tennisLeagueDtos, SportType.TENNIS);
         List<LeagueDto> basketballLeagueDtos = getLeaguesBySportType(sportDtoList, SportType.BASKETBALL);
-        processLeagues(basketballLeagueDtos, SportType.BASKETBALL);
+
+        List<League> leaguesResult = new LinkedList<>();
+        leaguesResult.addAll(processLeagues(footballLeagueDtos, SportType.FOOTBALL));
+        leaguesResult.addAll(processLeagues(iceHockeyLeagueDtos, SportType.ICE_HOCKEY));
+        leaguesResult.addAll(processLeagues(tennisLeagueDtos, SportType.TENNIS));
+        leaguesResult.addAll(processLeagues(basketballLeagueDtos, SportType.BASKETBALL));
+
+        printers.forEach(resultPrinter -> resultPrinter.printLeagues(leaguesResult));
     }
 
     private List<LeagueDto> getLeaguesBySportType(List<SportDto> sportDtos, SportType sportType) {
@@ -47,15 +51,16 @@ public class Parser {
                 .collect(Collectors.toList());
     }
 
-    private void processLeagues(List<LeagueDto> leagueDtos, SportType sportType) {
+    private List<League> processLeagues(List<LeagueDto> leagueDtos, SportType sportType) {
         if (!leagueDtos.isEmpty()) {
-            List<League> leaguesResult = forkJoinPool.invoke(LeagueTask.builder()
+            return forkJoinPool.invoke(LeagueTask.builder()
                     .leagueDtos(leagueDtos)
                     .sportType(sportType)
                     .dataService(dataService)
                     .forkJoinPool(forkJoinPool)
                     .build());
-            printers.forEach(resultPrinter -> resultPrinter.printLeagues(leaguesResult));
         }
+
+        return List.of();
     }
 }
